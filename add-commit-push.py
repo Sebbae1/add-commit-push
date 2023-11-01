@@ -1,12 +1,11 @@
 import os
 
-
 print("Add, Commit, Push with Python")
-print("\ngit status")
-os.system("git status")
-os.system("git add -A")
+#print("\ngit status")
+#os.system("git status")
+#os.system("git add -A")
 os.system("git commit -m 'Update files.'")
-os.system("git push")
+#s.system("git push")
 
 
 
