@@ -24,6 +24,17 @@ if confirm != "y" and confirm !="-f":
     print("Canceling: ", confirm)
     quit()
     
+if confirm =="y":     
+    print("\ngit add -A")
+    os.system("git add -A")
+    commitStatement = '\ngit commit -m "' + message + '"'
+    print(commitStatement)
+    os.system(commitStatement)
+    print('\ngit commit -m "Update files"')
+    os.system('git commit -m "Update files."')
+    print("\ngit push")
+    os.system("git push")
+    
 if confirm == "-f":
     print("Executing -f")
     print("\ngit add -A")
@@ -32,14 +43,3 @@ if confirm == "-f":
     os.system(commitStatement)
     os.system('git commit -m "Update files."')
     os.system("git push")   
-    
-    
-print("\ngit add -A")
-os.system("git add -A")
-commitStatement = '\ngit commit -m "' + message + '"'
-print(commitStatement)
-os.system(commitStatement)
-print('\ngit commit -m "Update files"')
-os.system('git commit -m "Update files."')
-print("\ngit push")
-os.system("git push")
