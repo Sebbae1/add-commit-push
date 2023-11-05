@@ -22,6 +22,16 @@ print("Do you want to continue with add, commit, push? (y)")
 confirm = input()
 if confirm != "y":
     print("Canceling: ", confirm)
+    quit()
+    
+if confirm == "-f":
+    print("Executing -f")
+    print("\ngit add -A")
+    os.system("git add -A")
+    commitStatement = '\ngit commit -m "' + message + '"'
+    os.system(commitStatement)
+    os.system('git commit -m "Update files."')
+    os.system("git push")   
     
 print("\ngit add -A")
 os.system("git add -A")
