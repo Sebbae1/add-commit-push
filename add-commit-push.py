@@ -20,7 +20,7 @@ os.system("git status")
 #W3C School's Code Lines 4-6
 print("Do you want to continue with add, commit, push? (y)")
 confirm = input()
-if confirm != "y":
+if confirm != "y" and confirm !="-f":
     print("Canceling: ", confirm)
     quit()
     
@@ -32,6 +32,7 @@ if confirm == "-f":
     os.system(commitStatement)
     os.system('git commit -m "Update files."')
     os.system("git push")   
+    
     
 print("\ngit add -A")
 os.system("git add -A")
